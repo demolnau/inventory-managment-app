@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+
+  ul
+    each item in item_list
+      li
+        a(href=item.url) #{item.item_name}
+
+    else
+      p There are no items currently in inventory. Please come back when we restock items!

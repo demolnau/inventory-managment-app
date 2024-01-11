@@ -1,0 +1,14 @@
+extend layout 
+block content 
+    h1 Item: #{item.item_name}
+    p #[strong Price:] $#{item.price}
+    p #[strong Description:] #{item.description}
+    p #[strong Category:] #{item.category}
+    p #[strong Number in Stock:] #{item.number_in_stock}
+    //- p #{item.img_url}
+    //- img(src=`#{item.img_url}` style='width:100px; height:100px;')
+    hr
+    p
+        a(href=item.url+'/delete') Delete item 
+    p 
+        a(href=item.url+'/update') Update item
